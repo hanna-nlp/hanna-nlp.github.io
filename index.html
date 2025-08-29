@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Academic Homepage</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="profile">
+      <img src="assets/headshot.png" alt="Headshot of Your Name" class="avatar" />
+      <div>
+        <h1>Your Name</h1>
+        <p>Professor, Paul G. Allen School of Computer Science & Engineering<br>
+        Adjunct, Statistics · University of Washington<br>
+        Senior Director, AI2</p>
+        <div class="social-links">
+          <a href="https://x.com/yourhandle" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.semanticscholar.org/author/your-id" target="_blank" aria-label="Semantic Scholar"><i class="fas fa-graduation-cap"></i></a>
+          <a href="https://scholar.google.com/citations?user=your-id" target="_blank" aria-label="Google Scholar"><i class="fas fa-book"></i></a>
+          <a href="https://linkedin.com/in/yourhandle" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#students">Students</a>
+      <a href="#lab">Lab</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="about">
+      <h2>About</h2>
+      <p>[Placeholder bio: add 2–3 sentences about your research interests, academic path, and affiliations.]</p>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <ul>
+        <li>Core pillar 1 — placeholder description.</li>
+        <li>Core pillar 2 — placeholder description.</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <p>[List or link to publications — placeholder]</p>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <p>[Courses taught, materials — placeholder]</p>
+    </section>
+
+    <section id="students">
+      <h2>Students</h2>
+      <p>[Current and past students — placeholder]</p>
+    </section>
+
+    <section id="lab">
+      <h2>Lab</h2>
+      <p>[Lab description and link — placeholder]</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <span id="email" data-user="you" data-domain="uw.edu">(enable JS)</span></p>
+      <p>Office: Placeholder office address</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Your Name</small>
+  </footer>
+
+  <script>
+    // Email obfuscation
+    const emailSpan = document.getElementById('email');
+    if (emailSpan) {
+      emailSpan.textContent = emailSpan.dataset.user + '@' + emailSpan.dataset.domain;
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
