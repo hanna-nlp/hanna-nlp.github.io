@@ -1,43 +1,45 @@
 /* Improved academic website style with rectangular, larger avatar */
 :root {
---maxw: 960px;
---pad: 1.2rem;
---color-accent: #4b5563;
---color-link: #1d4ed8;
+  --maxw: 960px;
+  --pad: 1.2rem;
+  --color-accent: #4b5563;
+  --color-link: #1d4ed8;
 }
-
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; color: #222; background: #fafafa; line-height: 1.6; }
 
-
 header.site-header { max-width: var(--maxw); margin: 0 auto; padding: var(--pad); border-bottom: 2px solid #e5e7eb; }
 header .profile { display: flex; align-items: center; gap: 1.5rem; }
-header .avatar { width: 180px; height: 240px; object-fit: cover; border: 3px solid #ddd; border-radius: 5px; }
+header .avatar { width: 180px; height: 240px; object-fit: cover; border: 3px solid #ddd; border-radius: 6px; }
 header h1 { margin: 0; font-size: 2rem; }
 header p { margin: .3rem 0; color: var(--color-accent); }
-
 
 .social-links { margin-top: 0.5rem; display: flex; gap: 0.8rem; }
 .social-links a { color: var(--color-link); font-size: 1.3rem; }
 .social-links a:hover { color: #0d3aa9; }
 
-
 .nav { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 1rem; }
 .nav a { text-decoration: none; color: var(--color-link); font-weight: 500; }
 .nav a:hover { text-decoration: underline; }
 
-
 main { max-width: var(--maxw); margin: 0 auto; padding: var(--pad); }
 section { margin-bottom: 2.5rem; }
 section h2 { font-size: 1.6rem; border-bottom: 2px solid #e5e7eb; padding-bottom: .4rem; margin-bottom: 1rem; }
+
 ul, ol { padding-left: 1.2rem; }
+
 footer.site-footer { max-width: var(--maxw); margin: 0 auto; padding: var(--pad); text-align: center; border-top: 2px solid #e5e7eb; color: #555; }
 
+/* Publications list */
+.publication-list { list-style-type: none; padding-left: 0; }
+.publication-list li { margin-bottom: 1rem; line-height: 1.5; }
+.publication-list a { text-decoration: none; color: var(--color-link); margin-left: 0.4rem; }
+.publication-list a:hover { text-decoration: underline; }
 
 /* Responsive adjustments */
 @media (max-width: 640px) {
-header .profile { flex-direction: column; align-items: flex-start; }
-header .avatar { width: 140px; height: 190px; }
-.nav { gap: .7rem; }
+  header .profile { flex-direction: column; align-items: flex-start; }
+  header .avatar { width: 140px; height: 190px; }
+  .nav { gap: .7rem; }
 }
